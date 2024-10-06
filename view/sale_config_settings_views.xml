@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+	
+    <record id="view_commission_config_real_estate" model="ir.ui.view">
+        <field name="name">commission settings</field>
+        <field name="model">res.config.settings</field>
+        <field name="inherit_id" ref="itsys_real_estate.res_config_settings_view_form_rs"/> <!-- odoo11 -->
+        <field name="arch" type="xml">
+			<xpath expr="//div[@data-key='itsys_real_estate']" position="inside">
+                    <h2>Commissions</h2>
+                    <div class="row mt16 o_settings_container">
+                        <div class="col-xs-12 col-md-6 o_setting_box">
+                            <div class="o_setting_right_pane">
+                                <label for="when_to_pay"/>
+                                <div class="text-muted">
+                                    Allow manual pay commission
+                                </div>
+                                <field name="when_to_pay" class="o_light_label mt16" widget="radio"/>
+                            </div>
+                        </div>
+                   </div>
+            </xpath>
+        </field>
+    </record>
+
+</odoo>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+	<menuitem id="menu_commission_main" name="Commissions"
+				  web_icon="real_estate_commission,static/description/icon.png"
+			  	  sequence="29"
+				  groups="account.group_account_invoice"/>
+
+	<menuitem id="menu_commission_teams" name="Sales Teams"
+				  action="sales_team.crm_team_action_config" parent="menu_commission_main"/>
+
+</odoo>

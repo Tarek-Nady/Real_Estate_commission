@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<odoo>
+    <data>
+        <record id="view_is_owner_form_commission" model="ir.ui.view">
+            <field name="name">res.partner.is_owner.commission form</field>
+            <field name="model">res.partner</field>
+            <field name="inherit_id" ref="itsys_real_estate.view_partner_is_tenant_is_owner_form"/>
+            <field name="arch" type="xml">
+                 <xpath expr="//group[@name='partner_type']" position="inside">
+                      <field name="x_mart_commission" invisible="is_owner == False"/>
+                      <field name="x_rental_mart_commission" invisible="is_owner == False"/>
+                 </xpath>
+            </field>
+        </record>
+    </data>
+</odoo>
